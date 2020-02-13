@@ -142,7 +142,7 @@ if __name__ == '__main__':
     plot_model(vgg16_model, show_shapes=True,to_file='model.png')
 
     # training
-    history = vgg16_model.fit(x_train, y_train, epochs=30, batch_size=32 , validation_split=(x_val,y_val))
+    history = vgg16_model.fit(x_train, y_train, epochs=30, batch_size=32 , validation_data=(x_val,y_val))
 
     # saving model, history and history figure
     vgg16_model.save('./result/vgg16net_model.h5')
